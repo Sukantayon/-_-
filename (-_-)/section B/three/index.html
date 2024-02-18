@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     
+     <title>Simple Website with CSS</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+        /* Inline CSS */
+        #inline-style {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Simple Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Formatted Text</h2>
+        <p class="external-style">This text is styled using an external CSS file.</p>
+        <p style="color: green;">This text is styled using inline CSS.</p>
+        <p id="inline-style">This text is styled using internal CSS.</p>
+    </section>
+    <section>
+        <h2>Forms</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+    <section>
+        <h2>Tables</h2>
+        <table class="external-style">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Jane</td>
+                <td>Smith</td>
+                <td>25</td>
+            </tr>
+        </table>
+        <table style="border: 2px solid red;">
+            <tr>
+                <td>Apple</td>
+                <td>Orange</td>
+                <td>Banana</td>
+            </tr>
+            <tr>
+                <td>Grapes</td>
+                <td>Mango</td>
+                <td>Watermelon</td>
+            </tr>
+        </table>
+    </section>
+    <footer>
+        <p>&copy; 2024 Simple Website</p>
+    </footer>
+</body>
+</html>

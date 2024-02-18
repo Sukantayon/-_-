@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Actions Demo</title>
+<style>
+  .action-container {
+    margin-top: 20px;
+  }
+  .box {
+    width: 200px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="action-container">
+  <div class="box" id="changeText" onmouseover="changeText()">Hover over me to change text</div>
+</div>
+
+<div class="action-container">
+  <div class="box" id="changeColor" onclick="changeColor()">Click me to change color</div>
+</div>
+
+<div class="action-container">
+  <div class="box" id="removeTag" ondblclick="removeTag()">Double click me to remove</div>
+</div>
+
+<div class="action-container">
+  <div class="box" id="insertTag" oncontextmenu="insertTag(event)">Right click me to insert</div>
+</div>
+
+<script>
+function changeText() {
+  var element = document.getElementById('changeText');
+  element.innerHTML = "Text changed!";
+}
+
+function changeColor() {
+  var element = document.getElementById('changeColor');
+  var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16); // Generates a random hex color
+  element.style.backgroundColor = randomColor;
+}
+
+function removeTag() {
+  var element = document.getElementById('removeTag');
+  element.parentNode.removeChild(element);
+}
+
+function insertTag(event) {
+  event.preventDefault(); // Prevent the default context menu from appearing
+  var container = document.createElement('div');
+  container.className = 'box';
+  container.innerHTML = 'New Tag Inserted';
+  document.body.appendChild(container);
+}
+</script>
+
+</body>
+</html>
